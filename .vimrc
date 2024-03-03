@@ -32,11 +32,11 @@ map <A-j> 3j
 map <A-k> 3k
 map <A-v> <C-v>
 map R $
-nnoremap <Space>o o<Esc>
-nnoremap <Space>O O<Esc>
-nnoremap <Space>p o<Esc>p
-nnoremap <Space>P O<Esc>p
-nmap <Space><Esc> :noh<CR>
+nnoremap <leader>o o<Esc>
+nnoremap <leader>O O<Esc>
+nnoremap <leader>p o<Esc>p
+nnoremap <leader>P O<Esc>p
+nmap <silent> <leader><Esc> :noh<CR>
 vnoremap < <gv
 vnoremap > >gv
 nnoremap > >>
@@ -50,12 +50,15 @@ vnoremap / ""y/<C-r>"<cr>
 vnoremap ? ""y?<C-r>"<cr>
 map K i<CR><Esc>
 map V V0o0o
-map <Space>R :%s///gc<Left><Left><Left><Left>
-vmap <Space>R :s///g<Left><Left><Left>
-nnoremap <Leader>gi gi
-nnoremap <Space> <Nop>
-vnoremap <Space> <Nop>
-" map <Space>dp "dp
+map <leader>R :%s///gc<Left><Left><Left><Left>
+vmap <leader>R :s///g<Left><Left><Left>
+nnoremap <leader>gi gi
+nnoremap <leader> <Nop>
+vnoremap <leader> <Nop>
+" map <leader>dp "dp
+imap () ()<Left>
+imap [] []<Left>
+imap {} {}<Left>
 
 "switch places of two arguments in parentheses
 map @s F,w""d])%""pl""dt,w""P
@@ -64,27 +67,28 @@ map @s F,w""d])%""pl""dt,w""P
     nnoremap d "dd
     nnoremap D "dD
     vnoremap d "dd
-    nnoremap <Space>d d
-    nnoremap <Space>D D
-    vnoremap <Space>d d
+    nnoremap <leader>d d
+    nnoremap <leader>D D
+    vnoremap <leader>d d
 
     nnoremap c "dc
     nnoremap C "dC
     vnoremap c "dc
-    nnoremap <Space>c c
-    nnoremap <Space>C C
-    vnoremap <Space>c c
+    nnoremap <leader>c c
+    nnoremap <leader>C C
+    vnoremap <leader>c c
 
     nnoremap s "ds
     nnoremap S "dS
-    nnoremap <Space>s ""s
-    nnoremap <Space>S ""S
+    nnoremap <leader>s ""s
+    nnoremap <leader>S ""S
 
     nnoremap x "dx
     nnoremap X "dX
-    nnoremap <Space>x x
-    nnoremap <Space>X X
+    nnoremap <leader>x x
+    nnoremap <leader>X X
 
-    vnoremap p "0p
-    vnoremap <Space>p P
+    "vnoremap p "0p
+    vmap p c<C-p><Esc>
+    vnoremap <leader>p P
 " }
