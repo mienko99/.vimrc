@@ -12,10 +12,11 @@ set showcmd
 set visualbell
 set clipboard=unnamedplus
 set timeoutlen=10000
+language messages en_US.UTF-8
 " set timeout
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
+map q <Nop>
+noremap Q q
 imap <A-j> <Esc><A-j>
 imap <A-k> <Esc><A-k>
 imap <C-d> <Esc><C-d>
@@ -26,8 +27,6 @@ vmap u <Nop>
 vmap U <Nop>
 map <C-j> 8j
 map <C-k> 8k
-map <C-d> 8j
-map <C-u> 8k
 map <A-j> 3j
 map <A-k> 3k
 map <A-v> <C-v>
@@ -49,16 +48,15 @@ imap <C-p> <C-r>+
 vnoremap / ""y/<C-r>"<cr>
 vnoremap ? ""y?<C-r>"<cr>
 map K i<CR><Esc>
-map V V0o0o
+"map V V0o0o
 map <leader>R :%s///gc<Left><Left><Left><Left>
 vmap <leader>R :s///g<Left><Left><Left>
 nnoremap <leader>gi gi
 nnoremap <leader> <Nop>
 vnoremap <leader> <Nop>
 " map <leader>dp "dp
-imap () ()<Left>
-imap [] []<Left>
-imap {} {}<Left>
+map <leader>q :q<cr>
+map <leader>w :w<cr>
 
 "switch places of two arguments in parentheses
 map @s F,w""d])%""pl""dt,w""P
